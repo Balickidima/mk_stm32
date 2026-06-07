@@ -1,0 +1,56 @@
+{
+    // Cortex-Debug настройки
+    "cortex-debug.gdbPath": "C:/Users/Alex Pronin/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gdb.exe",
+    "cortex-debug.openOCDPath": "C:/Users/Alex Pronin/.platformio/packages/tool-openocd/bin/openocd.exe",
+    "cortex-debug.openOCDScripts": [
+        "C:/Users/Alex Pronin/.platformio/packages/tool-openocd/openocd/scripts"
+    ],
+
+    // Формат отображения чисел
+    "cortex-debug.registerUseNaturalFormat": true,
+    "cortex-debug.variableUseNaturalFormat": true,
+
+    // 🔥 Live Watch - обновление переменных в реальном времени
+    "cortex-debug.continuousDisassembly": true,
+    "cortex-debug.gdbServerArgs": ["-d"],
+    
+    // Период обновления переменных (мс)
+    "cortex-debug.requestRate": 500,
+    
+    // Разрешить обновление переменных без остановки
+    "cortex-debug.allowRemoteCommands": true,
+
+    // SWO/ITM настройки для вывода в реальном времени
+    "cortex-debug.swoEnabled": true,
+    "cortex-debug.swoConfig": {
+        "enabled": true,
+        "source": "probe",
+        "format": "itm",
+        "cpuFrequency": 84000000,
+        "swoFrequency": 2000000,
+        "decoders": [
+            {
+                "port": 0,
+                "label": "ITM Port 0",
+                "type": "console",
+                "showOnStartup": true
+            },
+            {
+                "port": 1,
+                "label": "ITM Port 1",
+                "type": "console",
+                "showOnStartup": false
+            }
+        ]
+    },
+
+    // Автоматическое обновление переменных при остановке
+    "cortex-debug.autoExpandVariables": true,
+    
+    // 🔥 Показывать переменные в реальном времени
+    "cortex-debug.showDevDebugOutput": "raw",
+
+    // CMake Tools integration
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.default.intelliSenseMode": "gcc-arm"
+}

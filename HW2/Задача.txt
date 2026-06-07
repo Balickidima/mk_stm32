@@ -1,0 +1,17 @@
+Создайте проект в среде разработки STM32CubeIDE с имеющейся в наличии платой Nucleo. Напишите код реализующий следующую функцию -  при нажатии на клавишу должен устанавливаться 1-й уровень RDP. В качестве проверки, попробуйте считать прошивку программой STM32CubeProgrammer. Убедитесь в невозможности этой операции. Снимите защиту и убедитесь что при этой операции память вашего микроконтроллера будет очищена.
+FLASH_OBProgramInitTypeDef FLASH_OBInitStruct;
+
+HAL_FLASH_Unlock();
+HAL_FLASH_OB_Unlock();
+
+HAL_FLASHEx_OBGetConfig(&FLASH_OBInitStruct);
+
+FLASH_OBInitStruct.OptionType = OPTIONBYTE_RDP;
+FLASH_OBInitStruct.RDPLevel = OB_RDP_LEVEL_1;		
+
+HAL_FLASHEx_OBProgram(&FLASH_OBInitStruct);
+
+HAL_FLASH_OB_Launch();
+
+HAL_FLASH_OB_Lock();
+HAL_FLASH_Lock();
