@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<device schemaVersion="1.1" xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="CMSIS-SVD_Schema_1_1.xsd">
+  <name>STM32F401</name>
+  <version>1.0</version>
+  <description>STM32F401 MCU</description>
+  <addressUnitBits>8</addressUnitBits>
+  <width>32</width>
+  <peripherals>
+    <peripheral>
+      <name>GPIOA</name>
+      <version>1.0</version>
+      <description>General Purpose I/O Port A</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40020000</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+      <registers>
+        <register>
+          <name>MODER</name>
+          <description>GPIO port mode register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>OTYPER</name>
+          <description>GPIO port output type register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>OSPEEDR</name>
+          <description>GPIO port output speed register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>PUPDR</name>
+          <description>GPIO port pull-up/pull-down register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>IDR</name>
+          <description>GPIO port input data register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+        </register>
+        <register>
+          <name>ODR</name>
+          <description>GPIO port output data register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>BSRR</name>
+          <description>GPIO port bit set/reset register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>32</size>
+          <access>write-only</access>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>GPIOC</name>
+      <version>1.0</version>
+      <description>General Purpose I/O Port C</description>
+      <groupName>GPIO</groupName>
+      <baseAddress>0x40020800</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+      <registers>
+        <register>
+          <name>MODER</name>
+          <description>GPIO port mode register</description>
+          <addressOffset>0x0</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>OTYPER</name>
+          <description>GPIO port output type register</description>
+          <addressOffset>0x4</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>OSPEEDR</name>
+          <description>GPIO port output speed register</description>
+          <addressOffset>0x8</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>PUPDR</name>
+          <description>GPIO port pull-up/pull-down register</description>
+          <addressOffset>0xC</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>IDR</name>
+          <description>GPIO port input data register</description>
+          <addressOffset>0x10</addressOffset>
+          <size>32</size>
+          <access>read-only</access>
+        </register>
+        <register>
+          <name>ODR</name>
+          <description>GPIO port output data register</description>
+          <addressOffset>0x14</addressOffset>
+          <size>32</size>
+          <access>read-write</access>
+        </register>
+        <register>
+          <name>BSRR</name>
+          <description>GPIO port bit set/reset register</description>
+          <addressOffset>0x18</addressOffset>
+          <size>32</size>
+          <access>write-only</access>
+        </register>
+      </registers>
+    </peripheral>
+    <peripheral>
+      <name>RCC</name>
+      <version>1.0</version>
+      <description>Reset and Clock Control</description>
+      <groupName>RCC</groupName>
+      <baseAddress>0x40023800</baseAddress>
+      <size>32</size>
+      <access>read-write</access>
+    </peripheral>
+  </peripherals>
+</device>

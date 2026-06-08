@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build & Flash",
+            "type": "shell",
+            "command": "pio run -e debug -t upload",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "PlatformIO: Build",
+            "type": "shell",
+            "command": "pio run -e debug",
+            "group": "build",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "PlatformIO: Clean",
+            "type": "shell",
+            "command": "pio run -e debug -t clean",
+            "group": "build",
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Erase Chip",
+            "type": "shell",
+            "command": "openocd",
+            "args": [
+                "-s", "C:/Users/Alex Pronin/.platformio/packages/tool-openocd/openocd/scripts",
+                "-f", "interface/stlink.cfg",
+                "-f", "target/stm32f4x.cfg",
+                "-c", "init",
+                "-c", "reset halt",
+                "-c", "stm32f4x mass_erase 0",
+                "-c", "exit"
+            ],
+            "problemMatcher": [],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}
